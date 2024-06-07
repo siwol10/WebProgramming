@@ -7,14 +7,13 @@
         function showTime(){
             var dateElement = document.getElementById('currentTime'); //8장 getElementById
             var now = new Date(); // 7장 Date객체
-            var option={
-                year : 'numeric',
-                month : 'long',
-                day :'numeric',
-                hour:'2-digit',
-                minute:'2-digit'
-            };
-            dateElement.textContent=now.toLocaleDateString('ko-KR', option);
+            var option="방문시각: "
+            option+=now.getFullYear()+"년도 ";
+            option+=now.getMonth()+1+"월 ";
+            option+=now.getDate()+"일 ";
+            option+=now.getHours()+"시 ";
+            option+=now.getMinutes()+"분 ";
+            dateElement.textContent=option;
         }
     </script>
 </head>
